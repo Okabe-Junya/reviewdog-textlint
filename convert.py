@@ -45,7 +45,12 @@ def convert(json_data: dict):
 def main():
     json_data = get_json()
     payload = convert(json_data)
-    print(json.dumps(payload))
+
+    try:
+        print(json.dumps(payload))
+    except json.JSONDecodeError:
+        print("Invalid JSON: {}".format(payload))
+        sys.exit(1)
 
 
 if __name__ == "__main__":
