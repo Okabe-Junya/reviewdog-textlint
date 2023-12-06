@@ -41,7 +41,7 @@ runs:
       run: "npm install --save-dev textlint textlint-rule-preset-japanese @textlint/textlint-plugin-markdown"
 
     - name: Setup Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: 3.9
 
